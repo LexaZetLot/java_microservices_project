@@ -1,0 +1,13 @@
+version: '4'
+services:
+  postgres:
+    image: postgres
+    container_name: review_container
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+    ports:
+      - "5434:5434"
+    volumes:
+      - ./postgres:/data/postgres

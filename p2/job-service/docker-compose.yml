@@ -1,0 +1,13 @@
+version: '4'
+services:
+  postgres:
+    image: postgres
+    container_name: job_container
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres:/data/postgres
